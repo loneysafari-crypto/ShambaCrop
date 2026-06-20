@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – Shamba Crop Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🌾 Shamba Crop Analysis</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="app.html">How to Use</a></li>
+      
+    </ul>
+  </nav>
+
+
+  <!-- ── PROJECT BACKGROUND ─────────────────── -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+
+      <span class="section-eyebrow">Background</span>
+      <h2>Why We Built This</h2>
+      <p class="section-sub">
+        Smallholder farmers in Tanzania face increasing climate variability. Satellite remote sensing
+        offers an affordable way to monitor crop conditions at field scale, with no ground equipment required.
+      </p>
+
+      <div class="method-grid">
+
+        <div class="method-card">
+          <h4>🎯 Objective</h4>
+          <p>Provide a free, browser-based tool for computing and visualising key agronomic indicators
+             across three farm seasons — Preparation, Cultivation, and Harvesting — using open satellite data.</p>
+        </div>
+
+        <div class="method-card">
+          <h4>🛰️ Remote Sensing Approach</h4>
+          <p>Sentinel-2 SR imagery is cloud-masked and composited monthly. Spectral indices (NDVI, MNDWI,
+             NDMI, CIre, NDRE) are derived per-pixel and averaged over the study farm boundary.</p>
+        </div>
+
+        <div class="method-card">
+          <h4>🌧️ Rainfall Integration</h4>
+          <p>CHIRPS daily precipitation is summed per month, enabling direct comparison between rainfall
+             inputs and vegetation response in the trend charts.</p>
+        </div>
+
+        <div class="method-card">
+          <h4>🌡️ Temperature Monitoring</h4>
+          <p>MODIS MOD11A2 8-day LST composites are averaged monthly to detect heat stress periods,
+             particularly critical during germination in the Preparation season.</p>
+        </div>
+
+        <div class="method-card">
+          <h4>📊 Monthly Trend Analysis</h4>
+          <p>All indicators are computed for each of the 8 months (Nov 2025 – Jun 2026) and plotted
+             as interactive line and bar charts with trendlines in the GEE sidebar panel.</p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INDICATORS SECTION -->
+  <section class="section indicators-section">
+    <div class="container">
+      <span class="section-eyebrow">What We Monitor</span>
+      <h2>7 Satellite-Derived Indicators</h2>
+      <p class="section-sub">Each indicator is computed monthly from multi-source satellite imagery, covering the full Nov 2025 – Jun 2026 farm season cycle.</p>
+
+      <div class="indicators-grid">
+
+        <div class="indicator-card">
+          <div class="ind-icon" style="background:#C8E6C9">🌿</div>
+          <h4>NDVI</h4>
+          <p>Vegetation Greenness &amp; Crop Health — detects canopy density from bare soil to dense healthy crop.</p>
+        </div>
+
+        <div class="indicator-card">
+          <div class="ind-icon" style="background:#BBDEFB">💧</div>
+          <h4>MNDWI</h4>
+          <p>Modified Water &amp; Wetness Index — distinguishes surface water and saturated soil from dry vegetation.</p>
+        </div>
+
+        <div class="indicator-card">
+          <div class="ind-icon" style="background:#D7CCC8">🪨</div>
+          <h4>Soil Moisture</h4>
+          <p>NDMI Proxy — estimates canopy water content and soil wetness; low values signal drought stress risk.</p>
+        </div>
+
+        <div class="indicator-card">
+          <div class="ind-icon" style="background:#DCEDC8">🧪</div>
+          <h4>Soil Nutrient</h4>
+          <p>Chlorophyll Index Red Edge (CIre) — proxy for leaf chlorophyll content, indicating nitrogen availability.</p>
+        </div>
+
+        <div class="indicator-card">
+          <div class="ind-icon" style="background:#FFE0B2">⚠️</div>
+          <h4>Stressed Vegetation</h4>
+          <p>NDRE — sensitive to early-stage nutrient or water stress before visible wilting begins.</p>
+        </div>
+
+        <div class="indicator-card">
+          <div class="ind-icon" style="background:#BBDEFB">🌧️</div>
+          <h4>Monthly Rainfall</h4>
+          <p>CHIRPS daily precipitation totals summed per month — validates rainfall-driven vegetation responses.</p>
+        </div>
+
+        <div class="indicator-card">
+          <div class="ind-icon" style="background:#FFCDD2">🌡️</div>
+          <h4>Land Surface Temp</h4>
+          <p>MODIS MOD11A2 monthly mean LST (°C) — identifies heat stress risk at critical growth stages.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA SOURCES SECTION -->
+  <section class="section sources-section">
+    <div class="container">
+      <span class="section-eyebrow">Data Sources</span>
+      <h2>Built on Trusted Open Datasets</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.68)">
+        Open satellite data from ESA Copernicus, UCSB, and NASA — accessed and processed via Google Earth Engine.
+      </p>
+
+      <div class="sources-grid">
+        <div class="source-card">
+          <div class="source-logo">🛰️</div>
+          <h4>Sentinel-2 SR Harmonised</h4>
+          <p>COPERNICUS/S2_SR_HARMONIZED · 10–20 m spatial resolution, cloud-masked at 80% threshold for rainy-season months</p>
+        </div>
+        <div class="source-card">
+          <div class="source-logo">🌧️</div>
+          <h4>CHIRPS Daily Rainfall</h4>
+          <p>UCSB-CHG/CHIRPS/DAILY · Satellite-gauge blended product at ~5.5 km, summed to monthly totals</p>
+        </div>
+        <div class="source-card">
+          <div class="source-logo">🌡️</div>
+          <h4>MODIS LST 8-day</h4>
+          <p>MODIS/061/MOD11A2 · Daytime land surface temperature at 1 km resolution, averaged to monthly means</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- ── STUDY AREA ─────────────────────────── -->
+  <section class="section sources-section">
+    <div class="container">
+      <span class="section-eyebrow">Study Area</span>
+      <h2>Shamba Farm, Tanzania</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.7)">
+        The monitoring system is centred on a defined farm polygon (SHAMBA) digitised in Google Earth Engine,
+        located in Tanzania. All spatial analyses are clipped to this boundary.
+      </p>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="https://loneysafari.users.earthengine.app/view/shambacropanalysis"
+           target="_blank" class="btn btn-hero" style="font-size:1.05rem; padding:15px 42px;">
+          🗺️ View Farm on Earth Engine App
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Shamba Crop Analysis System &nbsp;|&nbsp; Dar es Salaam, Tanzania</p>
+  </footer>
+
+</body>
+</html>

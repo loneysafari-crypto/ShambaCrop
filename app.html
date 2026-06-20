@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Use – Shamba Crop Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🌾 Shamba Crop Analysis</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="app.html" class="active">How to Use</a></li>
+    </ul>
+  </nav>
+
+  <section class="section page-section">
+    <div class="container">
+
+      <span class="section-eyebrow">User Guide</span>
+      <h2>How to Use the Dashboard</h2>
+      <p class="section-sub">
+        Follow these steps to explore crop health, soil conditions, rainfall, and temperature trends
+        using the Shamba Crop Analysis System on Google Earth Engine.
+      </p>
+
+      <div class="how-to-use">
+
+        <div class="step-card" data-step="1">
+          <h3>Step 1: Set the Date Range</h3>
+          <p>In the left sidebar, enter your <strong>Start Date</strong> and <strong>End Date</strong>
+             (format: YYYY-MM-DD). The default range spans all three farm seasons:
+             <strong>2025-11-01 → 2026-06-30</strong>.</p>
+        </div>
+
+        <div class="step-card" data-step="2">
+          <h3>Step 2: Quick Season Select</h3>
+          <p>Use the coloured quick-select buttons to instantly fill the date range for a specific season:<br><br>
+             🔘 <strong>All Seasons</strong> — Nov 2025 – Jun 2026<br>
+             🟧 <strong>Preparation</strong> — Nov 2025 – Dec 2025<br>
+             🟩 <strong>Cultivation</strong> — Jan 2026 – Mar 2026<br>
+             🟨 <strong>Harvesting</strong> — Apr 2026 – Jun 2026
+          </p>
+        </div>
+
+        <div class="step-card" data-step="3">
+          <h3>Step 3: Run Full Crop Analysis</h3>
+          <p>Click the <strong>"🔍 Run Full Crop Analysis"</strong> green button.
+             The system will process Sentinel-2, CHIRPS, and MODIS data for your selected period —
+             allow <strong>30–90 seconds</strong> for composites to render. Watch the status
+             message at the bottom of the panel for progress updates.</p>
+        </div>
+
+        <div class="step-card" data-step="4">
+          <h3>Step 4: Explore Map Layers</h3>
+          <p>Seven indicator layers and three True Color composites (one per season) are
+             added to the map. Toggle each layer on or off using the
+             <strong>Layer List (↗ top-right corner of the map)</strong> to compare
+             indicators side-by-side.</p>
+        </div>
+
+        <div class="step-card" data-step="5">
+          <h3>Step 5: Switch the Active Layer</h3>
+          <p>Use the <strong>"Display Layer on Map"</strong> dropdown in the sidebar to select
+             a layer, then click <strong>"🔄 Update Map Layer"</strong>. Options include:
+             NDVI, MNDWI, Soil Moisture, Soil Nutrient, Stressed Vegetation, Rainfall, LST,
+             and True Color per season.</p>
+        </div>
+
+        <div class="step-card" data-step="6">
+          <h3>Step 6: Read the Monthly Trend Charts</h3>
+          <p>Scroll down the sidebar to view <strong>8 monthly trend charts</strong> — one
+             overview combo chart plus one dedicated chart per indicator. Each covers all
+             8 months from Nov 2025 to Jun 2026, with linear trendlines included.</p>
+        </div>
+
+        <div class="step-card" data-step="7">
+          <h3>Step 7: Export to Google Drive</h3>
+          <p>Click <strong>"📥 Export to Google Drive"</strong> to queue 4 export tasks:<br>
+             • Spectral indices — GeoTIFF at 20 m<br>
+             • CHIRPS Rainfall — GeoTIFF at 5 km<br>
+             • MODIS LST — GeoTIFF at 1 km<br>
+             • Monthly statistics — CSV table<br><br>
+             Then open the <strong>GEE Tasks tab (▶)</strong> and click <em>Run</em> on each task.</p>
+        </div>
+
+      </div>
+
+      <!-- Big Launch Button -->
+      <div style="text-align:center; margin: 72px 0 56px;">
+        <a href="https://loneysafari.users.earthengine.app/view/shambacropanalysis"
+           target="_blank"
+           class="btn btn-green"
+           style="font-size:1.28rem; padding:18px 58px;">
+          🚀 Open Earth Engine App
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Shamba Crop Analysis System &nbsp;|&nbsp; Dar es Salaam, Tanzania</p>
+  </footer>
+
+</body>
+</html>
